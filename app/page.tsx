@@ -19,10 +19,9 @@ import {  ResolvingMetadata  ,type Metadata} from 'next'
 const inter = Inter({ subsets: ["latin"] });
 
 
-export const metadata = {
-  title: "Information - Intelliegent - Innovation",
-  description: "3i được sáng lập với lý tưởng vận dụng sức sáng tạo của con người về măt công nghệ để phục vụ xã hội những sản phẩm và giải pháp mang tính trí tuệ và hiệu quả cao trong cuộc sống.",
-};
+
+
+console.log(Logo3i)
 
 export async function generateMetadata(
   parent: ResolvingMetadata
