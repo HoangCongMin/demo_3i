@@ -11,19 +11,16 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
-import { Inter } from "@next/font/google";
 import Logo3i from "../public/images/logo/logo.png";
 import {  ResolvingMetadata  ,type Metadata} from 'next'
 
 
-const inter = Inter({ subsets: ["latin"] });
-
-
-
-
-console.log(Logo3i)
-
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
 export async function generateMetadata(
+  { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> { 
   const previousImages = (await parent).openGraph?.images || []
